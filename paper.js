@@ -2,9 +2,9 @@ class paper{
     constructor(x,y){
         var options={
             isStatic:false,
-            restitution:1.5,
-            friction:2,
-            density:1  
+            restitution:0.5,
+            friction:0.5,
+            density:0.5  
            
           }
           //this.x=x;

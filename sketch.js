@@ -36,9 +36,9 @@ paper=new paper(100,100,10,10)
   
   dustbin1=Bodies.rectangle(width/2,365,width,15,{isStatic:true});
   World.add(world,dustbin1);
-  dustbin2=Bodies.rectangle(870,345,10,50,{isStatic:true});
+  dustbin2=Bodies.rectangle(870,height,10,height,{isStatic:true});
   World.add(world,dustbin2);
-  dustbin3=Bodies.rectangle(720,345,10,50,{isStatic:true});
+  dustbin3=Bodies.rectangle(720,height,10,height,{isStatic:true});
   World.add(world,dustbin3);
 
 	
@@ -65,15 +65,21 @@ function draw() {
 
 
 
-function KeyPressed(){
-  if(keyCode===UP_ARROW){
-   Matter.Body.setPosition(paper.body,{x:4000,y:150}); 
-  }
-}
+//function KeyPressed(){
+ // if(keyCode===UP_ARROW){
+ //  Matter.Body.setPosition(paper.body,{x:400,y:150}); 
+  //}
+//}
 
 
 function keyPressed(){
   if(keyCode===DOWN_ARROW){
     Matter.Body.setPosition(paper.body,{x:700,y:250})
+  }
+}
+
+function keyPressed(){
+  if(keyCode===UP_ARROW){
+    Matter.Body.applyForce(paper.body,paper.body.position,{x:18,y:-20})
   }
 }
